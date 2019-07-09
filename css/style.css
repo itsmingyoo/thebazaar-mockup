@@ -1,0 +1,110 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #cfa239;
+  font-weight: 500;
+  line-height: 1.4;
+  background-color: yellow;
+  height: 30rem; }
+
+.container {
+  display: grid;
+  grid-template-rows: 65vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.board {
+  background-color: orangered;
+  grid-column: full-start / full-end; }
+
+.feature {
+  background-color: black;
+  grid-column: full-start / full-end; }
+
+.footer {
+  background-color: purple;
+  grid-column: full-start / full-end; }
+
+.gallery {
+  background-color: green;
+  grid-column: full-start / full-end; }
+
+.header {
+  background-image: url(../img/hype.jpg);
+  background-position: center;
+  background-size: cover;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(4rem, max-content);
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 3rem 2rem 3rem;
+  align-items: start; }
+  .header__btns {
+    justify-self: end;
+    padding: 4.8rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, max-content); }
+  .header__title {
+    font-size: 6rem;
+    text-transform: uppercase; }
+  .header__caption {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    justify-items: start;
+    grid-gap: 1rem; }
+  .header__btn {
+    background-color: black !important;
+    border: 2px solid #fff !important;
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    padding: .2rem 1rem; }
+    .header__btn:hover {
+      border: 2px solid #cfa239 !important; }
+  .header__text {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: .2rem; }
+
+.header-nav {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-gap: 2rem;
+  align-items: center;
+  list-style: none;
+  transition: all 0.2s .header-nav __item; }
+  .header-nav__link:link, .header-nav__link:visited {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase; }
+  .header-nav__link:hover {
+    color: #cfa239; }
+
+.btn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer; }
+  .btn:hover {
+    color: #cfa239; }
+
+.news {
+  background-color: blue;
+  grid-column: full-start / full-end; }

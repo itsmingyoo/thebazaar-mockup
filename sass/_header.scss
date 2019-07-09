@@ -1,0 +1,108 @@
+.header {
+    background-image: url(../img/hype.jpg);
+    background-position: center;
+    background-size: cover;
+
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(4rem, max-content);
+    grid-template-columns: repeat(2, 1fr);
+    
+    padding: 0 3rem 2rem 3rem;
+    // grid-row-gap: 2rem;
+    align-items: start;
+
+    &__btns {
+        // align-self: center;
+        justify-self: end;
+        padding: 4.8rem 0;
+
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+    }
+    
+    &__title {
+        font-size: 6rem;
+        text-transform: uppercase;
+    }
+
+    &__caption {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        color: #fff;
+
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        align-items: center;
+        justify-items: start;
+        grid-gap: 1rem;
+    }
+
+    &__btn  {
+        background-color: black !important;
+        border: 2px solid #fff !important;
+        font-size: 1.1rem !important;
+        font-weight: 700;
+        padding: .2rem 1rem;
+
+        &:hover {
+            border: 2px solid $color-primary !important;
+        }
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        letter-spacing: .2rem;
+    }
+
+    &__logo {
+        // display: block;
+        // height: 100%;
+        // width: 100%;
+    }
+}
+
+// navigation
+.header-nav {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    grid-gap: 2rem;
+    align-items: center;
+    list-style: none;
+    transition: all .2s
+
+    &__item {
+
+    }
+
+    &__link:link,
+    &__link:visited {
+        font-size: 2rem;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &__link:hover {
+        color: $color-primary;
+    }
+}
+
+
+// button style
+.btn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-primary;
+    }
+}
